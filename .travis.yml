@@ -1,0 +1,15 @@
+language: ruby
+rvm:
+- 2.2.0
+script:
+- bundle exec rake db:migrate --trace
+- RAILS_ENV=test bundle exec rake db:migrate --trace
+- bundle exec rake db:test:prepare
+- bundle exec rspec -fd spec/
+deploy:
+  provider: heroku
+  api_key:
+    secure: QejPaYMzwr6uEep7HO5yi9yK8yz7yYotuz1WYO8ogyuRX3FzC97mKkvuBfuVA9hcS3lRp9hZBiZVxGvluR5/hSNycQhwchl/tSV+zlDFmd3LfpYr1RzIljWl/5de1otrQk/vP+WRobbJY/9v0bJgjim5a4QSVpFBH/zdMqL0b1E=
+  app: nepbd
+  on:
+    repo: newa34/nepBD
