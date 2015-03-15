@@ -36,6 +36,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 ruby '2.2.0'
 
+gem 'devise'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -47,7 +49,7 @@ group :development, :test do
   gem 'spring'
   # for heroku deployment
   gem 'sqlite3'
-  
+
   #RSpec for testing
   gem 'rspec-rails', '~>3.0'
 end
