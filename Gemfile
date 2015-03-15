@@ -47,6 +47,9 @@ group :development, :test do
   gem 'spring'
   # for heroku deployment
   gem 'sqlite3'
+  
+  #RSpec for testing
+  gem 'rspec-rails', '~>3.0'
 end
 
 group :production do
